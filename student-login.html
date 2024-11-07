@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Login</title>
+
+<style>
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Background Style */
+    body {
+        background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.6)), url('DALL·E 2024-11-01 17.00.46 - A professional and modern banner for an educational institute website. The design features an inviting campus scene with diverse students engaged in v.webp') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #fff;
+    }
+
+    /* Centered Login Box */
+    .login-box {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        color: #333;
+    }
+
+    /* Institute Logo */
+    .login-box img {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+
+    /* Login Header */
+    .login-box h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .login-box p {
+        font-size: 14px;
+        color: #666;
+    }
+
+    /* Form Fields */
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    /* Show Password Icon */
+    .show-password {
+        position: absolute;
+        right: 20px;
+        top: 12px;
+        cursor: pointer;
+    }
+
+    /* Login Button */
+    .login-box button {
+        width: 100%;
+        padding: 10px;
+        margin: 15px 0;
+        background-color: #003366;
+        color: #fff;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .login-box button:hover {
+        background-color: #00509e;
+    }
+
+    /* Remember Me & Forgot Password */
+    .login-box .options {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+
+    .login-box a {
+        color: #003366;
+        text-decoration: none;
+    }
+
+    .login-box a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer Links */
+    .footer {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .footer a {
+        color: #666;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .footer a:hover {
+        color: #003366;
+        text-decoration: underline;
+    }
+
+    /* Security Indicator */
+    .secure {
+        font-size: 12px;
+        color: #009688;
+    }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+<!-- Login Box -->
+<div class="login-box">
+    <img src="https://th.bing.com/th?id=OSK.4c9e703705c7212f14286cd3345ef07d&w=46&h=46&c=11&rs=1&qlt=80&o=6&dpr=2&pid=SANGAM" alt="Institute Logo">
+    <h2>Student Login</h2>
+    <p>Access your account</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required><br><br>
+
+        <label for="password">Password:</label>
+       <div style="position: relative;">
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <span class="show-password" onclick="togglePassword()">👁️</span>
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script src="login.js"></script>
+
+
+
+
+
+
+
+
+	 
+
+
+
+  
+
+    <!-- Security Indicator -->
+    <p class="secure">🔒 Secure Login</p>
+
+    <!-- Footer Links -->
+    <div class="footer">
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Service</a> | 
+        <a href="#">Contact Support</a>
+    </div>
+</div>
+
+<!-- JavaScript for Show Password Toggle -->
+<script>
+    function togglePassword() {
+        const password = document.getElementById("password");
+        password.type = password.type === "password" ? "text" : "password";
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #003366;
+}
+
+a {
+  text-decoration: none;
+}
+/* Basic Navbar Styling */
+/* Navbar container styling */
+.navbar {
+  background-color: #003366;
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  overflow: hidden;
+  height: 60px;
+}
+
+/* Logo styling */
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+  float: left; /* Align logo to the left */
+  margin-right: 20px; /* Add spacing between logo and nav links */
+}
+
+/* Navigation links styling */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left; /* Align navigation links next to the logo */
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-left: 1.5rem; /* Space between links */
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  background: url('DALL·E 2024-11-01 17.00.46 - A professional and modern banner for an educational institute website. The design features an inviting campus scene with diverse students engaged in v.webp') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #ffcc00;
+  color: #003366;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Announcements */
+.announcements {
+  background-color: #ffcc00;
+  color: #003366;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Programs */
+.programs {
+  padding: 2rem;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.program-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.program-card {
+  background: white;
+  padding: 1.5rem;
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.program-card h3 {
+  color: #003366;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-links a {
+  color: #ffcc00;
+  margin: 0 1rem;
+}
+
+.contact-info {
+  margin-top: 1rem;
+}

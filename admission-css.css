@@ -1,0 +1,213 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* Header Section */
+.header-section {
+  background-color: #003366;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: 2rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #ffcc00;
+}
+
+.breadcrumb {
+  margin-top: 0.5rem;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 400px;
+  background-image: url('DALL·E 2024-11-01 17.00.46 - A professional and modern banner for an educational institute website. The design features an inviting campus scene with diverse students engaged in v.webp');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-background {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.cta-button {
+  background-color: #ffcc00;
+  color: #003366;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Admissions Process Overview */
+.process-overview {
+  padding: 2rem;
+  text-align: center;
+}
+
+.process-steps {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.process-step {
+  margin: 1rem;
+  width: 22%;
+  text-align: center;
+}
+
+.step-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Eligibility Criteria */
+.eligibility-criteria {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.eligibility-columns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.eligibility-column {
+  width: 30%;
+}
+
+/* Important Dates Section */
+.important-dates {
+  padding: 2rem;
+}
+
+.date-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.date-card {
+  background-color: #eaeaea;
+  padding: 1rem;
+  margin: 1rem;
+  width: 200px;
+  text-align: center;
+}
+
+/* Financial Aid Section */
+.financial-aid {
+  padding: 2rem;
+  text-align: center;
+}
+
+.aid-types {
+  display: flex;
+  justify-content: space-around;
+}
+
+.aid-type {
+  width: 30%;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-card {
+  margin: 1rem;
+  width: 200px;
+  text-align: center;
+}
+
+.testimonial-card img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* Contact Admissions Office */
+.contact-admissions {
+  padding: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact-form input, .contact-form textarea {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.quick-links {
+  margin-bottom: 1rem;
+}
+
+.quick-links a {
+  margin: 0 1rem;
+  color: #ffcc00;
+}
+
+.social-media a {
+  margin: 0 1rem;
+  color: #ffcc00;
+}
+
+.map {
+  margin-top: 1rem;
+}
