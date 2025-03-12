@@ -19,36 +19,42 @@
     <button onclick="sendMessage()">Send</button>
 
     <script>
+        const repoOwner = "YOUR_USERNAME";  // Change to your GitHub username
+        const repoName = "private-chat";   // Change to your repository name
+
         async function loadMessages() {
-            const response = await fetch("messages.json");
-            const messages = await response.json();
+            const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/issues`);
+            const issues = await response.json();
             const messageBox = document.getElementById("messages");
             messageBox.innerHTML = "";
-            messages.forEach(msg => {
-                messageBox.innerHTML += `<p><strong>${msg.name}:</strong> ${msg.text}</p>`;
+            issues.forEach(issue => {
+                messageBox.innerHTML += `<p><strong>${issue.title}:</strong> ${issue.body}</p>`;
             });
         }
 
         async function sendMessage() {
             const name = document.getElementById("name").value;
             const message = document.getElementById("message").value;
+            if (!name || !message) return alert("Both fields are required!");
 
-            if (name === "" || message === "") return alert("Both fields are required!");
+            const requestBody = {
+                title: name,
+                body: message
+            };
 
-            const response = await fetch("messages.json");
-            const messages = await response.json();
-
-            messages.push({ name, text: message });
-
-            const blob = new Blob([JSON.stringify(messages, null, 2)], { type: "application/json" });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement("a");
-            a.href = url;
-            a.download = "messages.json";
-            a.click();
-            URL.revokeObjectURL(url);
-
-            alert("Message saved! Please upload `messages.json` to GitHub.");
+            fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/issues`, {
+                method: "POST",
+                headers: {
+                    "Authorization": "Bearer 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", 
+                    "Accept": "application/vnd.github.v3+json"
+                },
+                body: JSON.stringify(requestBody)
+            })
+            .then(() => {
+                alert("Message sent!");
+                loadMessages();
+            })
+            .catch(err => console.error("Error:", err));
         }
 
         loadMessages();
