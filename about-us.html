@@ -15,7 +15,44 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.min.js"></script>
+<script>
+  window.onload = function () {
+    // Confetti burst
+    confetti({
+      particleCount: 300,
+      spread: 120,
+      startVelocity: 50,
+      origin: { y: 0.7 }
+    });
 
+    // Eid Mubarak Text Animation
+    let msg = document.createElement("div");
+    msg.innerText = "✨ Eid Mubarak! 🎉";
+    msg.style.position = "fixed";
+    msg.style.top = "20px";
+    msg.style.left = "50%";
+    msg.style.transform = "translateX(-50%)";
+    msg.style.background = "#ffcc00";
+    msg.style.color = "#000";
+    msg.style.padding = "10px 20px";
+    msg.style.borderRadius = "10px";
+    msg.style.fontSize = "20px";
+    msg.style.fontWeight = "bold";
+    msg.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.3)";
+    msg.style.animation = "fadeOut 3s linear forwards";
+    document.body.appendChild(msg);
+
+    setTimeout(() => msg.remove(), 3000);
+  };
+</script>
+
+<style>
+  @keyframes fadeOut {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.5); }
+  }
+</style>
 
 
 
